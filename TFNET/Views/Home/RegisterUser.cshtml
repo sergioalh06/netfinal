@@ -1,0 +1,106 @@
+﻿@model TFNET.Models.Input
+
+@{
+    ViewBag.Title = "RegisterUser";
+}
+
+<section>
+    <!-- Page content-->
+    <div class="content-wrapper">
+        <h3>
+            Ingresar datos del usuario
+            <small>Es necesario llenar todos lo siguientes datos para poder calcular la probabilidad de manera exitosa</small>
+        </h3>
+        <div class="row">
+            <div class="col-sm-6">
+                <!-- START panel-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Stacked form</div>
+                    <div class="panel-body">
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <label>UserId</label>
+                                @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Age</label>
+                                @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                @Html.DropDownListFor(x => x.Gender, new SelectList(Model.Genders), "Select Gender", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>UserType</label>
+                                @Html.EditorFor(model => model.UserType, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.UserType, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>TransactionId</label>
+                                @Html.EditorFor(model => model.TransactionId, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TransactionId, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Timestamp</label>
+                                @Html.EditorFor(model => model.Timestamp, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Timestamp, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>ItemId</label>
+                                @Html.EditorFor(model => model.ItemId, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ItemId, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Quantity</label>
+                                @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Value</label>
+                                @Html.EditorFor(model => model.Value, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Value, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Location</label>
+                                @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>ProductCategory</label>
+                                @Html.EditorFor(model => model.ProductCategory, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ProductCategory, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>Group</label>
+                                @Html.EditorFor(model => model.Group, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Group, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <label>ChurnPeriod</label>
+                                @Html.EditorFor(model => model.ChurnPeriod, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.ChurnPeriod, "", new { @class = "text-danger" })
+                            </div>
+
+                            <button class="btn btn-sm btn-primary" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- END panel-->
+            </div>
+            <div class="col-sm-6">
+                <!-- START panel-->
+                <!-- END panel-->
+            </div>
+        </div>
+
+    </div>
+</section>
+

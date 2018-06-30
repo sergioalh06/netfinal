@@ -1,0 +1,178 @@
+﻿
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://themicon.co/theme/angle/v3.8.9.1/backend-jquery/app/table-extended.html -->
+<html lang="en" class="backgroundsize bgpositionshorthand bgpositionxy bgrepeatround bgrepeatspace bgsizecover borderradius cssanimations csscalc csstransforms supports csstransforms3d csstransitions no-flexboxtweener fontface inlinesvg localstorage multiplebgs preserve3d sessionstorage smil svgclippaths svgfilters svgforeignobject canvas todataurljpeg todataurlpng todataurlwebp no-touch">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bootstrap Admin App + jQuery">
+    <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+    <title>Angle - Bootstrap Admin Template</title>
+    <!-- =============== VENDOR STYLES ===============-->
+    <!-- FONT AWESOME-->
+    <link rel="stylesheet" href="~/Assets/font-awesome.min.css"/>
+    <!-- SIMPLE LINE ICONS-->
+    <link rel="stylesheet" href="~/Assets/simple-line-icons.css"/>
+    <!-- ANIMATE.CSS-->
+    <link rel="stylesheet" href="~/Assets/animate.min.css"/>
+    <!-- WHIRL (spinners)-->
+    <link rel="stylesheet" href="~/Assets/whirl.css"/>
+    <!-- =============== PAGE VENDOR STYLES ===============-->
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="~/Assets/bootstrap.css" id="bscss"/>
+    <!-- =============== APP STYLES ===============-->
+    <link rel="stylesheet" href="~/Assets/app.css" id="maincss"/>
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0,0,0,0.6);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- top navbar-->
+        <header class="topnavbar-wrapper">
+            <!-- START Top Navbar-->
+            <nav class="navbar topnavbar" role="navigation">
+                <!-- START navbar header-->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="http://themicon.co/theme/angle/v3.8.9.1/backend-jquery/app/table-extended.html#/">
+                        <div class="brand-logo">
+                            <img class="img-responsive" src="~/Assets/logo.png" alt="App Logo">
+                        </div>
+                        <div class="brand-logo-collapsed">
+                            <img class="img-responsive" src="~/Assets/logo-single.png" alt="App Logo">
+                        </div>
+                    </a>
+                </div>
+                <!-- END navbar header-->
+                <!-- START Nav wrapper-->
+                <div class="nav-wrapper">
+                 
+                  
+                    <!-- END Right Navbar-->
+                </div>
+                <!-- END Nav wrapper-->
+                <!-- START Search form-->
+                <form class="navbar-form" role="search" action="http://themicon.co/theme/angle/v3.8.9.1/backend-jquery/app/search.html">
+                    <div class="form-group has-feedback">
+                        <input class="form-control" type="text" placeholder="Type and hit enter ...">
+                        <div class="fa fa-times form-control-feedback" data-search-dismiss=""></div>
+                    </div>
+                    <button class="hidden btn btn-default" type="submit">Submit</button>
+                </form>
+                <!-- END Search form-->
+            </nav>
+            <!-- END Top Navbar-->
+        </header>
+        <!-- sidebar-->
+        <aside class="aside">
+            <!-- START Sidebar (left)-->
+            <div class="aside-inner">
+                <nav class="sidebar" data-sidebar-anyclick-close="">
+                    <!-- START sidebar nav-->
+                    <ul class="nav">
+                        <!-- START user info-->
+                        <li class="has-user-block">
+                            <div class="collapse" id="user-block">
+                                <div class="item user-block">
+                                    <!-- User picture-->
+                                    <div class="user-block-picture">
+                                        <div class="user-block-status">
+                                            <img class="img-thumbnail img-circle" src="~/Assets/02.jpg" alt="Avatar" width="60" height="60">
+                                            <div class="circle circle-success circle-lg"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Name and Job-->
+                                    <div class="user-block-info">
+                                        <span class="user-block-name">Hello, Mike</span>
+                                        <span class="user-block-role">Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- END user info-->
+                        <!-- Iterates over all sidebar items-->
+                        <li class="nav-heading ">
+                            <span data-localize="sidebar.heading.HEADER">Navegacion principal</span>
+                        </li>
+                        <li class=" ">
+                            <a href="@Url.Action("Index","Home")" title="Widgets">
+                                <span data-localize="sidebar.nav.WIDGETS">Home</span>
+                            </a>
+                        </li>
+                        <li class=" ">
+                            <a href="@Url.Action("RegisterUser","Home")" title="Widgets">
+                                <span data-localize="sidebar.nav.WIDGETS">Nuevo registro</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- END sidebar nav-->
+                </nav>
+            </div>
+            <!-- END Sidebar (left)-->
+        </aside>
+        <!-- offsidebar-->
+       
+        <!-- Main section-->
+        @RenderBody()
+        <!-- Page footer-->
+        <footer>
+            <span>© 2018 - Angle</span>
+        </footer>
+    </div>
+    <!-- =============== VENDOR SCRIPTS ===============-->
+    <!-- MODERNIZR-->
+    <script src="~/Assets/modernizr.custom.js.descarga"></script>
+    <!-- MATCHMEDIA POLYFILL-->
+    <script src="~/Assets/matchMedia.js.descarga"></script>
+    <!-- JQUERY-->
+    <script src="~/Assets/jquery.js.descarga"></script>
+    <!-- BOOTSTRAP-->
+    <script src="~/Assets/bootstrap.js.descarga"></script>
+    <!-- STORAGE API-->
+    <script src="~/Assets/jquery.storageapi.js.descarga"></script>
+    <!-- JQUERY EASING-->
+    <script src="~/Assets/jquery.easing.js.descarga"></script>
+    <!-- ANIMO-->
+    <script src="~/Assets/animo.js.descarga"></script>
+    <!-- SLIMSCROLL-->
+    <script src="~/Assets/jquery.slimscroll.min.js.descarga"></script>
+    <!-- SCREENFULL-->
+    <script src="~/Assets/screenfull.js.descarga"></script>
+    <!-- LOCALIZE-->
+    <script src="~/Assets/jquery.localize.js.descarga"></script>
+    <!-- RTL demo-->
+    <script src="~/Assets/demo-rtl.js.descarga"></script>
+    <!-- =============== PAGE VENDOR SCRIPTS ===============-->
+    <!-- SPARKLINE-->
+    <script src="~/Assets/index.js.descarga"></script>
+    <!-- =============== APP SCRIPTS ===============-->
+    <script src="~/Assets/app.js.descarga"></script>
+
+
+</body>
+</html>
